@@ -27,6 +27,7 @@ import { PopUpComponent } from './components/pop-up/pop-up.component';
 import { PopUpService } from '../services/pop-up/pop-up.service';
 import { CustomDateAdapter } from './adapters/custom-date-adapter';
 import { MatMenuModule } from '@angular/material/menu';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 const COMPONENTS: any = [
   PageNotFoundComponent,
@@ -47,6 +48,7 @@ const MODULES: any = [
   CommonModule,
   FormsModule,
   ReactiveFormsModule,
+  FontAwesomeModule,
   HttpClientModule,
 ];
 const PIPES: any = [

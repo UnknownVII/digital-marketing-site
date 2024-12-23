@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DatePipe } from '@angular/common';
 import { LazyLoadImageDirective } from './directives/lazy-load-image/lazy-load-image.directive';
 import { BrowserModule } from '@angular/platform-browser';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [AppComponent, LazyLoadImageDirective],
@@ -16,6 +17,7 @@ import { BrowserModule } from '@angular/platform-browser';
     SharedModule,
     HttpClientModule,
     LandingPageModule,
+    FontAwesomeModule,
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent],

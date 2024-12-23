@@ -1,0 +1,16 @@
+.fa-check {
+  font-size: 2rem;
+  color: red;
+  aspect-ratio: 1;
+}
+
+.test {
+  color: blue;
+  font-size: 2rem;
+  &:hover {
+    font-size: 5rem;
+    color: red;
+  }
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+}
