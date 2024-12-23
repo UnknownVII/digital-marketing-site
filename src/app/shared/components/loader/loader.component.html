@@ -1,0 +1,8 @@
+<div *ngIf="showLoad" class="loader-container">
+  <div id="contrastTile" class="loader"><div class="tile"></div></div>
+
+  <div *ngIf="text" class="text">
+    {{ text ? "Loading" : text }}
+  </div>
+</div>
+<div *ngIf="showLoad" class="background"></div>

@@ -1,0 +1,43 @@
+<div *ngFor="let toastItem of toastItems; let i = index">
+  <div
+    class="toast-class {{ toastItem.toastClass }}"
+    [class.out]="!toastItem.toastState"
+    [style.top.px]="i * 100"
+    (click)="dismiss(toastItem)"
+  >
+    <div class="icons">
+      <i
+        *ngIf="toastItem.toastClass === 'success'"
+        class="fa fa-check success"
+        aria-hidden="true"
+      ></i>
+      <i
+        *ngIf="toastItem.toastClass === 'warning'"
+        class="fa fa-exclamation warning"
+        aria-hidden="true"
+      ></i>
+      <i
+        *ngIf="toastItem.toastClass === 'error'"
+        class="fa fa-times error"
+        aria-hidden="true"
+      ></i>
+      <i
+        *ngIf="toastItem.toastClass === 'info'"
+        class="fa fa-info info"
+        aria-hidden="true"
+      ></i>
+    </div>
+    <div class="message">
+      <span class="text1 prevent-select">{{
+        toastItem.toastClass | titlecase
+      }}</span>
+      <span class="text2 prevent-select">{{ toastItem.toastMessage }}</span>
+    </div>
+    <i
+      class="fa fa-times close"
+      aria-hidden="true"
+      (click)="dismiss(toastItem)"
+    ></i>
+    <div class="background"></div>
+  </div>
+</div>

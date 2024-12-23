@@ -1,0 +1,17 @@
+<div class="main-container">
+  <div class="section-left"></div>
+  <div class="section-right">
+    <div class="top">
+      <div class="title">
+        {{ errorTitle ? errorTitle : "Unexpected Error" }}
+      </div>
+      <div class="subtitle">
+        {{ errorSubtitle ? errorSubtitle : "ERROR CODE 0" }}
+      </div>
+    </div>
+    <div class="message">
+      {{ errorMessage ? errorMessage : "Cannot determine specific error" }}
+    </div>
+  </div>
+  
+</div>

@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { NavigationStart, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  template: `
+    <ng-container>
+      <app-toaster></app-toaster>
+      <router-outlet></router-outlet>
+    </ng-container>
+  `,
 })
 export class AppComponent {
-  title = 'digital-marketing-site';
+  title = 'shopify-forgot-pass-project';
 }

@@ -1,0 +1,12 @@
+<div *ngIf="showPopUp" class="background">
+  <div *ngIf="showPopUp" class="pop-container">
+    <div class="title">Confirmation</div>
+    <div class="subtitle">Are you sure you want to proceed?</div>
+    <div class="button-container">
+      <button class="button-primary" (click)="closePopUp()">Cancel</button>
+      <button class="button-primary" (click)="confirmActionAndClose()">Confirm</button>
+    </div>
+  </div>
+</div>
+
+<!-- //commit -->
