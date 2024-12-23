@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-@Pipe({ name: 'snake' })
+@Pipe({ name: 'snake', standalone: false })
 export class SnakeCasePipe implements PipeTransform {
   transform(inputString: string): string {
     if (inputString) {

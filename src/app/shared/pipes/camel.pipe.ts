@@ -1,8 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-@Pipe({ name: 'camel' })
+@Pipe({ name: 'camel', standalone: false })
 export class CamelCasePipe implements PipeTransform {
-
   transform(inputString: string): string {
     const words = inputString.split(/[- ]/g); // Split by whitespace
 
@@ -13,5 +12,4 @@ export class CamelCasePipe implements PipeTransform {
     );
     return sentence.join('');
   }
-
 }

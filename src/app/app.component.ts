@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NavigationStart, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +8,7 @@ import { NavigationStart, Router } from '@angular/router';
       <router-outlet></router-outlet>
     </ng-container>
   `,
+  standalone: false,
 })
 export class AppComponent {
   title = 'shopify-forgot-pass-project';

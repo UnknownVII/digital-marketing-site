@@ -19,7 +19,6 @@ import { ToasterComponent } from './components/toaster/toaster.component';
 import { LoaderComponent } from './components/loader/loader.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { DateAdapter, MatNativeDateModule } from '@angular/material/core';
-import { InjectionToken } from '@angular/core';
 import { BaseService } from '../services/base/base.service';
 import { HttpClientModule } from '@angular/common/http';
 import { LoaderService } from '../services/loader/loader.service';
@@ -65,11 +64,11 @@ const PROVIDERS: any = [BaseService, AuthService, LoaderService, PopUpService];
 
 @NgModule({
   declarations: [...COMPONENTS, ...PIPES],
+  imports: [...MODULES, ...MAT_MODULES],
+  exports: [...MODULES, ...MAT_MODULES, ...COMPONENTS, ...PIPES],
   providers: [
     ...PROVIDERS,
     { provide: DateAdapter, useClass: CustomDateAdapter },
   ],
-  imports: [...MODULES, ...MAT_MODULES, ...COMPONENTS, ...PIPES],
-  exports: [...MODULES, ...MAT_MODULES, ...COMPONENTS, ...PIPES],
 })
 export class SharedModule {}

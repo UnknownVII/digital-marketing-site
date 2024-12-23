@@ -2,6 +2,7 @@ import { Directive, ElementRef, Renderer2, AfterViewInit } from '@angular/core';
 
 @Directive({
   selector: 'img[lazyLoadImage]',
+  standalone: false,
 })
 export class LazyLoadImageDirective implements AfterViewInit {
   constructor(private el: ElementRef, private renderer: Renderer2) {}

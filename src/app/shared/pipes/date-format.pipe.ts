@@ -3,6 +3,7 @@ import { DatePipe } from '@angular/common';
 
 @Pipe({
   name: 'dateFormat',
+  standalone: false,
 })
 export class DateFormatPipe implements PipeTransform {
   transform(value: any, format: string = 'yyyy-MM-dd'): any {
