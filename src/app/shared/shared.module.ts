@@ -26,7 +26,7 @@ import { LoaderService } from '../services/loader/loader.service';
 import { AuthService } from '../services/auth/auth.service';
 import { PopUpComponent } from './components/pop-up/pop-up.component';
 import { PopUpService } from '../services/pop-up/pop-up.service';
-import { CustomDateAdapter } from './adapters/custon-date-adapter';
+import { CustomDateAdapter } from './adapters/custom-date-adapter';
 import { MatMenuModule } from '@angular/material/menu';
 
 const COMPONENTS: any = [
