@@ -10,6 +10,9 @@
 
 body {
   margin: 0;
+  background-color: #231f20;
+  line-height: 1;
+  scrollbar-gutter: stable;
 }
 
 p {
@@ -83,47 +86,6 @@ button::-moz-focus-inner {
   border: 0;
 }
 
-.button {
-  border-radius: 8px;
-  // height: 2.75rem;
-  height: fit-content;
-  transition: all 120ms ease-in-out;
-  &-filler {
-    min-width: 8.75rem;
-  }
-  &-primary {
-    padding: 0.8em 1em;
-    border-radius: 8px;
-    min-width: 8.75rem;
-    max-height: 3rem;
-    border: 1px solid #6eed83;
-    background-color: #113d2c;
-    color: white;
-    &:hover {
-      background-color: #045f3c;
-    }
-    transition: all 250ms ease-in-out;
-  }
-  &-secondary {
-    height: 2.75rem;
-    padding: 0.8em 1em;
-    border-radius: 8px;
-    border: 1px solid #113d2c;
-    background-color: #ffffff;
-    color: #113d2c;
-    &:hover {
-      color: white;
-      background-color: #045f3c;
-      border: 1px solid #6eed83;
-    }
-    &.shrink {
-      width: fit-content;
-      height: 2.75rem;
-    }
-    transition: all 250ms ease-in-out;
-  }
-}
-
 /* Apply scrollbar styles globally */
 * {
   scrollbar-width: thin;
@@ -150,7 +112,33 @@ button::-moz-focus-inner {
   background-color: #555; /* Scrollbar thumb color on hover */
 }
 
-/* Ensure scroll bars are always visible */
-body {
-  scrollbar-gutter: stable;
+.title {
+  background: radial-gradient(100% 58% at top, #ab3040 99%, #63363e)
+      calc(0 * 100% / 3) 0,
+    radial-gradient(100% 58% at bottom, #63363e 99%, #ab3040) calc(3 * 100% / 3)
+      0,
+    radial-gradient(100% 58% at top, #ab3040 99%, #63363e) calc(6 * 100% / 3) 0,
+    radial-gradient(100% 58% at bottom, #63363e 99%, #ab3040) calc(9 * 100% / 3)
+      0;
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-clip: text;
+  display: flex;
+  // padding: 20px;
+  font-size: 1.24em;
+  font-weight: bold;
+  animation: move 1s infinite linear;
+}
+
+@keyframes move {
+  to {
+    background-position: calc(-6 * 100% / 3) 0, calc(-3 * 100% / 3) 0,
+      calc(0 * 100% / 3) 0, calc(3 * 100% / 3) 0;
+  }
+}
+
+.bold {
+  font-weight: bold;
 }
