@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { PATHS } from '../../common/paths';
 @Component({
   selector: 'app-landing-page',
   templateUrl: './landing-page.component.html',
@@ -7,5 +7,5 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
   standalone: false,
 })
 export class LandingPageComponent {
-  faCoffee = faCoffee;
+  paths = PATHS; // Assign the imported paths to a property
 }

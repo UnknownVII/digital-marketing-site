@@ -1,3 +1,45 @@
-<app-loader></app-loader>
-<div><fa-icon class="test" [icon]="faCoffee"></fa-icon></div>
-<div><i class="fas fa-check"></i></div>
+<div class="main-container">
+  <div class="title-container">
+    <div class="content">
+      <div class="title prevent-select">LUNSOD LUNSAD</div>
+      <div class="subtitle">
+        Digital Creatives Capacity Development Training Workshop
+      </div>
+      <div class="links">
+        <a
+          class="box-container"
+          href="https://angular.dev/overview"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-angular"></i>
+        </a>
+        <a
+          class="box-container"
+          href="https://github.com/UnknownVII/digital-marketing-site.git"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-github-alt"></i>
+        </a>
+      </div>
+    </div>
+    <div class="footer">All Rights Reserved 2024</div>
+  </div>
+  <div class="list-container">
+    <div class="title-content">Links</div>
+    <div
+      *ngFor="let item of paths; let i = index"
+      class="list-item prevent-select"
+      [routerLink]="item.path"
+    >
+      <div class="content">
+        <div class="list-title">
+          <span class="bold">{{ item.title }}</span>
+        </div>
+        <span>by: {{ item.group }}</span>
+      </div>
+      <i class="fas fa-chevron-right"></i>
+    </div>
+  </div>
+</div>

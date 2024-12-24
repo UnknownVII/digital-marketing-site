@@ -8,6 +8,7 @@ import { DatePipe } from '@angular/common';
 import { LazyLoadImageDirective } from './directives/lazy-load-image/lazy-load-image.directive';
 import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [AppComponent, LazyLoadImageDirective],
@@ -18,6 +19,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HttpClientModule,
     LandingPageModule,
     FontAwesomeModule,
+    RouterModule,
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent],

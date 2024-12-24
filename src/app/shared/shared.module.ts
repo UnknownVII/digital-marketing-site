@@ -28,6 +28,7 @@ import { PopUpService } from '../services/pop-up/pop-up.service';
 import { CustomDateAdapter } from './adapters/custom-date-adapter';
 import { MatMenuModule } from '@angular/material/menu';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { RouterModule } from '@angular/router';
 
 const COMPONENTS: any = [
   PageNotFoundComponent,
@@ -50,6 +51,7 @@ const MODULES: any = [
   ReactiveFormsModule,
   FontAwesomeModule,
   HttpClientModule,
+  RouterModule,
 ];
 const PIPES: any = [
   CapitalizePipe,
