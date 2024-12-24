@@ -17,11 +17,6 @@ export const routes: Routes = [
       ),
   },
   {
-    path: '',
-    redirectTo: 'landing-page',
-    pathMatch: 'full',
-  },
-  {
     path: 'error',
     component: ErrorComponent,
     canActivate: [RefreshGuard],
