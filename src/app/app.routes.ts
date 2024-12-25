@@ -25,6 +25,15 @@ export const routes: Routes = [
   },
 
   {
+    path: 'black-and-white',
+    title: 'Landing Page',
+    // canActivate: [UnauthGuard],
+    loadChildren: () =>
+      import('./modules/black-and-white-module/black-and-white.module').then(
+        (m) => m.BlackAndWhiteModule
+      ),
+  },
+  {
     path: 'error',
     component: ErrorComponent,
     canActivate: [RefreshGuard],
