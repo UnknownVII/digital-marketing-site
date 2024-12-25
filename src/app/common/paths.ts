@@ -2,7 +2,7 @@ export const PATHS = [
   {
     title: 'Sample Website',
     group: 'Coordinator',
-    path: '/timi-and-tomas/landing-page',
+    path: '/timi-and-tomas/home',
   },
   {
     title: 'Black and White',

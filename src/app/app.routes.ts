@@ -10,12 +10,20 @@ export const routes: Routes = [
   {
     path: 'landing-page',
     title: 'Landing Page',
-    // canActivate: [UnauthGuard],
     loadChildren: () =>
       import('./modules/landing-page/landing-page.module').then(
         (m) => m.LandingPageModule
       ),
   },
+  {
+    path: 'timi-and-tomas',
+    title: 'Timi and Tomas',
+    loadChildren: () =>
+      import('./modules/sample-page/sample-landing-page.module').then(
+        (m) => m.SamplePageModule
+      ),
+  },
+
   {
     path: 'black-and-white',
     title: 'Landing Page',
@@ -33,7 +41,7 @@ export const routes: Routes = [
   ///MISC HANDLING
   { path: '', redirectTo: 'landing-page', pathMatch: 'full' },
   { path: 'null', redirectTo: 'landing-page', pathMatch: 'full' },
-  { path: '**', component: PageNotFoundComponent }, // Catching for undefined routes
+  { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({

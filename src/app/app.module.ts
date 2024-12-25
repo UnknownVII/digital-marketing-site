@@ -9,7 +9,7 @@ import { LazyLoadImageDirective } from './directives/lazy-load-image/lazy-load-i
 import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { RouterModule } from '@angular/router';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [AppComponent, LazyLoadImageDirective],
   imports: [
@@ -20,6 +20,7 @@ import { RouterModule } from '@angular/router';
     LandingPageModule,
     FontAwesomeModule,
     RouterModule,
+    BrowserAnimationsModule,
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent],

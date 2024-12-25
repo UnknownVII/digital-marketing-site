@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -12,4 +13,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'shopify-forgot-pass-project';
+
+  constructor(private router: Router) {}
+
+  @HostListener('window:keydown', ['$event'])
+  handleKeyDown(event: KeyboardEvent) {
+    if (event.key === 'F3') {
+      event.preventDefault();
+      this.navigateToLandingPage();
+    }
+  }
+
+  private navigateToLandingPage() {
+    this.router.navigate(['/landing-page']);
+  }
 }

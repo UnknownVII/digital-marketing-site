@@ -29,11 +29,13 @@ import { CustomDateAdapter } from './adapters/custom-date-adapter';
 import { MatMenuModule } from '@angular/material/menu';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { RouterModule } from '@angular/router';
+import { PseudoCarouselComponent } from './components/pseudo-carousel/pseudo-carousel.component';
 
 const COMPONENTS: any = [
   PageNotFoundComponent,
   FormInputUpdatedComponent,
   LandingPageComponent,
+  PseudoCarouselComponent,
   TestComponent,
   ToasterComponent,
   LoaderComponent,

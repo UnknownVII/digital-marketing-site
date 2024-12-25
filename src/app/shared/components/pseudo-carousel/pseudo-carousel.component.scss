@@ -1,0 +1,47 @@
+.carousel {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  &::after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+
+  & > div {
+    float: left;
+    margin-right: -100%;
+    cursor: pointer;
+    transform-origin: top left;
+    padding: 1.24rem;
+    padding-bottom: 0;
+    background-color: #f7efea;
+    border-radius: 16px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.35);
+    .bottom-container {
+      padding-bottom: 1.24rem;
+      padding-top: 0.24rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      & > :nth-child(1) {
+        color: #fd4e4e;
+      }
+      & > :nth-child(2) {
+        font-weight: 200;
+        color: #000000;
+      }
+      & > :nth-child(3) {
+        color: #c18c6b;
+      }
+    }
+  }
+
+  & > div img {
+    width: 14rem;
+    height: 18rem;
+    border-radius: 8px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
