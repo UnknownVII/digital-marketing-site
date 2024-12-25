@@ -17,9 +17,13 @@ export const routes: Routes = [
       ),
   },
   {
-    path: '',
-    redirectTo: 'landing-page',
-    pathMatch: 'full',
+    path: 'black-and-white',
+    title: 'Landing Page',
+    // canActivate: [UnauthGuard],
+    loadChildren: () =>
+      import('./modules/black-and-white-module/black-and-white.module').then(
+        (m) => m.BlackAndWhiteModule
+      ),
   },
   {
     path: 'error',
