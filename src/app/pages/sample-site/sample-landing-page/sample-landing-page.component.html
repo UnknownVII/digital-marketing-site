@@ -1,0 +1,84 @@
+<div class="main-container">
+  <img class="cups" [src]="'assets/sample-site/cups.svg'" alt="background" />
+  <img
+    class="mask"
+    [src]="'assets/sample-site/background-mask.png'"
+    alt="background"
+  />
+  <img
+    class="background"
+    [src]="'assets/sample-site/background.png'"
+    alt="background"
+  />
+
+  <div class="content">
+    <div class="content-top">
+      <img
+        class="established-date"
+        [src]="'assets/sample-site/established-date.svg'"
+        alt="background"
+      />
+      <div class="content-top-title">Welcome!</div>
+      <div class="context">
+        Timi and Thomas Cafe, established in 2020, is a beloved coffee shop in
+        Bago City with deep Bagonhon roots. Located on Gen. Luna Street, Brgy.
+        Poblacion, it is known for its vibrant and laid-back ambiance, making it
+        an ideal spot for anyone looking to relax and enjoy the atmosphere.
+      </div>
+    </div>
+    <div class="content-bottom">
+      <div class="content-bottom-contain">
+        <span class="line"></span>
+        <span class="content-bottom-title">
+          <img
+            [src]="'assets/sample-site/letter-h.svg'"
+            alt="background"
+            (click)="scrollToTop()"
+          /><span>ighlights</span>
+        </span>
+        <span class="line"></span>
+      </div>
+      <app-pseudo-carousel
+        [images]="images2"
+        (select)="message = 'you click on image ' + $event"
+      ></app-pseudo-carousel>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="footer-content">
+      <div class="left">
+        <img
+          [src]="'assets/sample-site/footer-logo.svg'"
+          alt="background"
+          (click)="scrollToTop()"
+        />
+        <div class="socials">
+          <a
+            class="box-container"
+            href="https://www.facebook.com/p/Timi-and-Thomas-100092044431526"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              [src]="'assets/sample-site/facebook-logo.svg'"
+              alt="background"
+            />
+          </a>
+          <a
+            class="box-container"
+            href="https://www.instagram.com/timi_and_thomas"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              [src]="'assets/sample-site/instagram-logo.svg'"
+              alt="background"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="right"></div>
+    </div>
+    <div class="end">All Rights Reserved 2024</div>
+  </div>
+</div>
