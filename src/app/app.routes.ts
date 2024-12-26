@@ -25,6 +25,15 @@ export const routes: Routes = [
   },
 
   {
+    path: 'red-and-purple',
+    title: 'Landing Page',
+    // canActivate: [UnauthGuard],
+    loadChildren: () =>
+      import('./modules/red-and-purple-module/red-and-purple.module').then(
+        (m) => m.RedAndPurpleModule
+      ),
+  },
+  {
     path: 'black-and-white',
     title: 'Landing Page',
     // canActivate: [UnauthGuard],

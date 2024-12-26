@@ -9,4 +9,9 @@ export const PATHS = [
     group: 'Coordinator',
     path: '/black-and-white/landing-page',
   },
+  {
+    title: 'Red and Purple',
+    group: 'Coordinator',
+    path: '/red-and-purple/landing-page',
+  },
 ];
